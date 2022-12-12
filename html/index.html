@@ -3,11 +3,15 @@
 	<head>
 		<title>puppy dot tf</title>
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
-		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-		<script defer src="../build/script.js"></script>
+		<link rel="icon" type="image/x-icon" href="/res/favicon.ico">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
 	</head>
 	<body>
-		<div class="box" style="max-width:360px;">
+		<!-- <script src="../jsb/script.js"></script> -->
+		<script type="module" src="../jsb/script.js"></script>
+
+		<div class="box root-container">
 			<div class="box title-container">
 				<div class="title-l">
 					random forecaster
@@ -15,17 +19,33 @@
 				<div class="nf nf-mdi-weather_fog center title-r"></div>
 			</div>
 
-			<div class="input-grid"
-			style="padding-top: var(--useless-gap)">
-				<div id="forecastbtn" class="ig ig-forecastbtn box">get forecast</div>
-				<div id="ig-city" class="ig ig-city box">city</div>
-				<div id="ig-high" class="ig ig-high box">high</div>
-				<div id="ig-icon" class="ig ig-icon box">icon</div>
-				<div id="ig-low" class="ig ig-low box">low</div>
-				<div id="ig-desc" class="ig ig-desc box">desc</div>
+			<div class="input-grid">
+				<button id="forecastbtn" class="ig ig-forecastbtn">get forecast</button>
+				<button id="ig-city" class="ig ig-city">city</button>
+				<div id="ig-high" class="ig ig-temp">
+					<div class="ig-label">
+						high
+					</div>
+					<div id="temp-high">
+						900F
+					</div>
+				</div>
+				<button id="ig-icon" class="ig ig-icon">
+					<!-- <div class="load-dual-ring"></div> -->
+				</button>
+				<div id="ig-low" class="ig ig-temp">
+					<div class="ig-label">
+						low
+					</div>
+					<div id="temp-low">
+						52F
+					</div>
+				</div>
+				<button id="ig-desc" class="ig ig-desc">desc</button>
+
+				powered by <a href="https://www.weatherapi.com/" title="Weather API">WeatherAPI.com</a>
 			</div>
 		</div>
-
 	</body>
 </html>
 

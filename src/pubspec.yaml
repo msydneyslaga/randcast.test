@@ -1,9 +1,0 @@
-name: fuckpubspec
-
-environment:
-  sdk: ">=2.18.0 <3.0.0"
-
-dependencies:
-  http: ^0.13.5
-  profanity_filter: ^2.0.0
-
